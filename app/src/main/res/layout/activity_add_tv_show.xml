@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddTvShowActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Title"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/edit_language"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Language"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/edit_genre"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Genre"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/edit_releasedate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Release Date"/>
+
+            <CalendarView
+                android:id="@+id/calendar_releasedate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+            </CalendarView>
+
+            <EditText
+                android:id="@+id/edit_pster"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Poster"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/edit_resume"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Resume"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/button_add_tvshow"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Add"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

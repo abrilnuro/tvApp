@@ -5,6 +5,7 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.RequestQueue;
 import com.android.volley.RetryPolicy;
 import com.android.volley.toolbox.Volley;
+import com.example.aimew.tvshowapp.utils.SessionStateManager;
 import com.google.gson.Gson;
 import com.squareup.otto.Bus;
 
@@ -13,6 +14,7 @@ public class App extends Application {
     private static Bus bus;
     private static RequestQueue requestQueue;
     private static Gson gson;
+    private static SessionStateManager sessionStateManager;
 
     @Override
     public void onCreate(){
@@ -20,7 +22,7 @@ public class App extends Application {
         bus = new Bus();
         requestQueue = Volley.newRequestQueue(this);
         gson = new Gson();
-
+        sessionStateManager = new SessionStateManager(this);
     }
 
     public static Bus getBus() {
@@ -41,4 +43,7 @@ public class App extends Application {
         return gson;
     }
 
+    public static SessionStateManager getSessionStateManager() {
+        return sessionStateManager;
+    }
 }
