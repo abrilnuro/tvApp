@@ -26,7 +26,7 @@ public class TvShow implements Serializable {
     private String poster;
 
     @SerializedName(JSONKeys.RELEASE_DATE)
-    private Date releaseDate;
+    private String releaseDate;
 
     public Integer getId() {
         return id;
@@ -76,11 +76,11 @@ public class TvShow implements Serializable {
         this.poster = poster;
     }
 
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 }
